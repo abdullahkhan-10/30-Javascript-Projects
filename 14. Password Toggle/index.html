@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Toggle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="input-box">
+        <!-- when the type is password, anything we write will be hide -->
+         <!-- if the type is text anything we write will be visible. -->
+        <input type="password" placeholder="Password" id="password">
+        <img src="eye-close.png" alt="error" id="eye-icon" onclick="togglePassword()">
+    </div>
+
+    <script>
+        let myPassword = document.getElementById("password")
+        let eyeIcon = document.getElementById("eye-icon")
+
+        function togglePassword(){
+            // if the type is equal to password , assign text to the type, mean show anything we have written in input.
+            if (myPassword.type == "password") {
+                myPassword.type = "text"
+                // also change the icon in src.
+                eyeIcon.src = "eye-open.png"
+            }else{
+                myPassword.type = "password"
+                eyeIcon.src = "eye-close.png"
+            }
+        }
+    </script>
+</body>
+</html>
