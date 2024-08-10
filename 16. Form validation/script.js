@@ -70,6 +70,7 @@ function validateMessage(){
     let required = 30;
     let left = required - message.length;
 
+    // Run the code if the value of left is greater than zero, if it become zero stop the running code inside curly braces, and run the code outside curly braces.
     if (left > 0) {
         messageError.innerHTML = left + " More characters required"
         return false;
@@ -81,8 +82,8 @@ function validateMessage(){
 
 // for submit button 
 function validateForm(){
-    // if any of the these condition is false, run the code
-    if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage) {
+    // if any of these condition is false, run the code
+    if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage()) {
         // we want to hide the error after 3 seconds.
         submitError.style.display = "block"
         submitError.innerHTML  = "Please fix error to submit"
