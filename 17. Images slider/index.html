@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="galler-wrap">
+        <img src="images/back.png" id="back-btn">
+        <div class="gallery">
+            <div>
+                <span><img src="images/image-1.png"></span>
+                <span><img src="images/image-2.png"></span>
+                <span><img src="images/image-3.png"></span>
+            </div>
+            <div>
+                <span><img src="images/image-4.png"></span>
+                <span><img src="images/image-5.png"></span>
+                <span><img src="images/image-6.png"></span>
+            </div>
+        </div>
+        <img src="images/next.png" id="next-btn">
+    </div>
+    
+    <script>
+        let scrollContainer = document.querySelector(".gallery")
+        let backBtn = document.getElementById("back-btn")
+        let nextBtn = document.getElementById("next-btn")
+
+        // 1. images will be sliding on the mouse wheel, on laptop slide two finger up and down to slide the images.
+        scrollContainer.addEventListener("wheel", (event) =>{
+            event.preventDefault()
+            scrollContainer.scrollLeft += event.deltaY;
+
+            // to make image sliding smooth. 
+            scrollContainer.style.scrollBehavior = "auto"
+        })
+
+        // 2. to slide image through red icons.
+        nextBtn.addEventListener("click", () =>{
+            scrollContainer.scrollLeft += 900    // because gallery width is 900px.
+
+            // to make image slide smooth
+            scrollContainer.style.scrollBehavior ="smooth"
+        })
+
+        backBtn.addEventListener("click", () =>{
+            scrollContainer.scrollLeft -= 900    
+            scrollContainer.style.scrollBehavior ="smooth"
+        })
+    </script>
+</body>
+</html>
