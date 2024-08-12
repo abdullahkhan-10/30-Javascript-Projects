@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #201f21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-box{
+    /* border: 2px solid red; */
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+.input-box input{
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    outline: none;
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+
+::placeholder{
+    font-style: 16px;
+}
+
+button{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button img{
+    width: 35px;
+}
+
+#message{
+    position: absolute;
+    top: 70px;
+    color: #fff;
+    font-size: 16px;
+    display: none;
+}
+/* we  will make the display block in javascript */
