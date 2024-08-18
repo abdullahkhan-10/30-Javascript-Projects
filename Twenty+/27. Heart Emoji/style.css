@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 320px;
+    height: 420px;
+    background-image: url(image.jpeg);
+    background-size: cover;
+    /* background-position: center; */
+    border-radius: 12px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+}
+
+.my-heart{
+    position: absolute;
+    font-size: 40px;
+    color: red;
+    /* top: 50%;
+    left: 50%; */
+    opacity: 0;
+    transform: translate(-50%, -50%);
+}
+
+.active{
+    /* we can add animation in active class */
+    animation: animate 0.8s linear forwards;
+
+    /* we can also add simple opacity without animation */
+    /* opacity: 1; */
+}
+
+@keyframes animate {
+    30%{
+        opacity: 1;
+        font-size: 80px;
+    }
+    50%{
+        opacity: 1;
+        font-size: 60px;
+    }
+    70%{
+        opacity: 1;
+        font-size: 70px;
+    }
+    80%{
+        opacity: 1;
+        font-size: 60px;
+    }
+
+    90%{
+        opacity: 1;
+        font-size: 60px;
+    }
+}
